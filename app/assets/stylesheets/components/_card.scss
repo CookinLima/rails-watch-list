@@ -2,6 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 350px;
 }
 
 .card-trip > img {
@@ -20,6 +21,11 @@
   font-size: 12px;
   opacity: 0.7;
   margin: 0;
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-trip .card-trip-infos {
