@@ -1,0 +1,16 @@
+<h1><%= @list.name %></h1>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+    <% @movies.each do |mov| %>
+
+      <h2>Title here</h2>
+      <p>Short description here!</p>
+    <% end %>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
