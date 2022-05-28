@@ -13,6 +13,7 @@
 <%# Using grid %>
   <div class="row">
   <% @movies.each do |mov| %>
+    <% bookmark = Bookmark.find_by(list: @list, movie: mov) %>
     <div class="col-4">
         <div class="my-3 card-trip">
           <img src="<%= mov.poster_url %>" />
@@ -21,7 +22,10 @@
               <h2 class="mb-2"><%= mov.title %></h2>
               <p class="mb-2"><%= mov.overview %></p>
               <%# Delete button %>
-              <%= link_to "Remove", bookmark_path(@bookmark), class: "btn btn-ghost btn-bottom-left" %>
+              <%= link_to "Remove", bookmark_path(bookmark), method: :delete, data: {
+                confirm: "Are you sure you want to remove #{mov.title} from your #{@list.name} list?"
+              },
+              class: "btn btn-ghost btn-bottom-left" %>
             </div>
           </div>
       </div>
