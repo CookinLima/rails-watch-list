@@ -6,7 +6,14 @@ My watching list
   <div class="row">
   <% @lists.each do |list| %>
     <div class="col-4">
-      <%= link_to list.name, list_path(list) %>
+      <%# <%= link_to list.name, list_path(list) %>
+      <%= link_to list_path(list) do %>
+        <div class="cards">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <%= list.name %>
+          </div>
+        </div>
+      <% end %>
     </div>
   <% end %>
   </div>
