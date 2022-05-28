@@ -1,25 +1,33 @@
-<h1><%= @list.name %></h1>
 
 <div class="container">
+  <div class= "d-flex justify-content-between">
+    <div>
+      <h1 class= "mt-3"><%= @list.name %></h1>
+    </div>
+    <div class="mt-3 ml-auto">
+      <a class="btn btn-primary btn-rounded" href="<%= new_list_bookmark_path(@list) %>">Add a new movie</a>
+    </div>
+  </div>
+
   <div class="row">
-
-
   <% @movies.each do |mov| %>
     <div class="col-4">
-        <div class="card-trip my-3">
+        <div class="my-3 card-trip">
           <img src="<%= mov.poster_url %>" />
           <div class="card-trip-infos">
-            <div>
-              <h2><%= mov.title %></h2>
-              <p><%= mov.overview %></p>
+            <div class="p-1" style="position: relative">
+              <h2 class="mb-2"><%= mov.title %></h2>
+              <p class="mb-2"><%= mov.overview %></p>
+              <%= link_to "Remove", "", class: "btn btn-ghost btn-bottom-left" %>
             </div>
-            <h2 class="card-trip-pricing">£99.99</h2>
+
+            <%# delete button %>
 
           </div>
       </div>
     </div>
   <% end %>
 
-  <a class="btn btn-primary" href="<%= new_list_bookmark_path(@list) %>">Add a new movie</a>
+
   </div>
 </div>
