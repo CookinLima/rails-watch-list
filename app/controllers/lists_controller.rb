@@ -7,6 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @movies = @list.movies
+    # to display bookmark needed to destroy it
   end
 
   def new
