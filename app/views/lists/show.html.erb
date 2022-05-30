@@ -16,7 +16,8 @@
     <% bookmark = Bookmark.find_by(list: @list, movie: mov) %>
     <div class="col-4">
         <div class="my-3 card-trip">
-          <div style="background-image: url('<%= image_path "https://image.tmdb.org/t/p/w200#{mov.poster_url}" %>')">
+          <div class="image-container">
+            <%= image_tag "https://image.tmdb.org/t/p/w200#{mov.poster_url}", class:"image", loading: "lazy" %>
           </div>
           <div class="card-trip-infos">
             <div class="p-1">

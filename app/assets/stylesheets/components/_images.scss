@@ -1,0 +1,20 @@
+.image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.face {
+  -webkit-box-shadow: 0px 0px 24px 16px #ffe5cb;
+  box-shadow: 0px 0px 24px 16px #ffe5cb;
+}
