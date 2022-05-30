@@ -32,7 +32,8 @@ gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.15"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "pry-byebug"
-gem "unsplash"
+# gem "unsplash"
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
